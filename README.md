@@ -11,7 +11,7 @@ We require some restful APIS to achieve the following:
 - [x] Init project
 - [x] Init models
 - [x] Setup base API response
-- [] Add API login
+- [x] Add API login
 - [] Add API create sleep time
 - [] Add API get list sleep time by user
 - [] Add API follow user

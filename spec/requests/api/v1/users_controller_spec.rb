@@ -12,7 +12,7 @@ RSpec.describe Api::V1::UsersController, type: :request do
         get "/api/v1/users", headers: authorized_headers(user_token.token)
       end
 
-      it "return data maps data", :show_in_doc, doc_title: "get all data maps" do
+      it "return users data", :show_in_doc, doc_title: "get all users data" do
         expect(response).to have_http_status(:ok)
       end
     end
