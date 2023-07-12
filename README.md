@@ -8,8 +8,8 @@ We require some restful APIS to achieve the following:
 
 ## TODO Plan
 
-- [] Init project
-- [] Init models
+- [x] Init project
+- [x] Init models
 - [] Setup base API response
 - [] Add API login
 - [] Add API create sleep time

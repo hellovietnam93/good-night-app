@@ -12,6 +12,7 @@ AllCops:
   Exclude:
     - 'bin/*'
     - 'node_modules/**/*'
+    - 'db/schema.rb'
 
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
