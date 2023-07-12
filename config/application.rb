@@ -47,6 +47,7 @@ module GoodNightApp
 
     config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
     config.eager_load_paths << Rails.root.join("lib")
+    config.eager_load_paths << Rails.root.join("doc")
     config.hosts += ENV["WHITELIST_DOMAINS"].split(",") if ENV["WHITELIST_DOMAINS"]
   end
 end

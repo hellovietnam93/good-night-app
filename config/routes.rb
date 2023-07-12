@@ -2,8 +2,11 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  def draw routes_name
+    instance_eval(File.read(Rails.root.join("config/routes/#{routes_name}.rb")))
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :api, format: :json do
+    draw :v1
+  end
 end

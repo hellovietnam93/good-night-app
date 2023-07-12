@@ -1,0 +1,8 @@
+en:
+  errors:
+    records:
+      not_found: "%{resource} not found"
+    params:
+      invalid: "params is missing or the value is empty: %{param}"
+    authentication:
+      missing_token: Authentication token is missing or invalid

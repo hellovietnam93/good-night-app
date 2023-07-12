@@ -10,7 +10,7 @@ We require some restful APIS to achieve the following:
 
 - [x] Init project
 - [x] Init models
-- [] Setup base API response
+- [x] Setup base API response
 - [] Add API login
 - [] Add API create sleep time
 - [] Add API get list sleep time by user
@@ -88,6 +88,12 @@ rails s
 
 ```bash
 rspec
+```
+
+* Generate Document
+
+```bash
+APIPIE_RECORD=examples rspec
 ```
 
 *  Security check
