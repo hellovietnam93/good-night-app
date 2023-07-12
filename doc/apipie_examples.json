@@ -1,0 +1,77 @@
+{
+  "users#index": [
+    {
+      "title": "get all data maps",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "24",
+            "type": "user",
+            "attributes": {
+              "id": 24,
+              "name": "Leonel Tromp",
+              "email": "leo.hane@hoppe.test"
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

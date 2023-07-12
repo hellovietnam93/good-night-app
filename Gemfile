@@ -5,12 +5,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.4'
 
+gem 'apipie-rails', '~> 1.2', '>= 1.2.1'
 gem 'bootsnap', require: false
 gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'jsonapi-serializer', '~> 2.2'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
+gem "settingslogic", "~> 2.0", ">= 2.0.9"
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 
 group :development, :test do
