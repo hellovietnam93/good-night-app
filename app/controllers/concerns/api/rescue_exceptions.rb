@@ -4,7 +4,7 @@ module Api
   module RescueExceptions
     extend ActiveSupport::Concern
 
-    included do
+    included do # rubocop:disable Metrics/BlockLength
       rescue_from ActionController::ParameterMissing do |error|
         render_invalid_params_response error
       end
@@ -13,6 +13,7 @@ module Api
       rescue_from ActiveRecord::RecordNotFound, with: :render_resource_not_found_response
 
       rescue_from Api::Error::MissingToken, with: :missing_token_render_options
+      rescue_from Api::Error::AuthenticationFailed, with: :authentication_failed_render_options
 
       ###############################
       ########## protected ##########
@@ -36,6 +37,10 @@ module Api
       end
 
       def missing_token_render_options exception
+        render json: exception.to_hash, status: :unauthorized
+      end
+
+      def authentication_failed_render_options exception
         render json: exception.to_hash, status: :unauthorized
       end
     end

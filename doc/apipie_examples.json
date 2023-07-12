@@ -1,7 +1,127 @@
 {
+  "sessions#create": [
+    {
+      "title": "sign in user success",
+      "verb": "POST",
+      "path": "/api/v1/sessions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "email": "filiberto@stracke.test",
+          "password": "qq6Bsemo7amVS"
+        }
+      },
+      "response_data": {
+        "data": {
+          "id": "65",
+          "type": "user_token",
+          "attributes": {
+            "id": 65,
+            "token": "YQhqZjJqgM"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "115",
+                "type": "user"
+              }
+            }
+          }
+        },
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "sign in user failed",
+      "verb": "POST",
+      "path": "/api/v1/sessions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "email": "miles.torphy@mraz-lowe.test",
+        "password": "kY2Vc5VOk7pHc"
+      },
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "user",
+            "message": "params is missing or the value is empty: user"
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "sign in user failed",
+      "verb": "POST",
+      "path": "/api/v1/sessions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "email": "invalid@invalid.com",
+          "password": "WWtoJs22SB8GdUl3B"
+        }
+      },
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication",
+            "message": "Invalid email or password."
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "sign in user failed",
+      "verb": "POST",
+      "path": "/api/v1/sessions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "user": {
+          "email": "natalia@pollich.test",
+          "password": "INVALID_PASSWORD"
+        }
+      },
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication",
+            "message": "Invalid email or password."
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "users#index": [
     {
-      "title": "get all data maps",
+      "title": "get all users data",
       "verb": "GET",
       "path": "/api/v1/users",
       "versions": [
@@ -12,12 +132,12 @@
       "response_data": {
         "data": [
           {
-            "id": "24",
+            "id": "119",
             "type": "user",
             "attributes": {
-              "id": 24,
-              "name": "Leonel Tromp",
-              "email": "leo.hane@hoppe.test"
+              "id": 119,
+              "name": "Clifford Ortiz",
+              "email": "kiara@okon-willms.test"
             }
           }
         ],

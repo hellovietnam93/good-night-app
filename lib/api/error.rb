@@ -25,5 +25,12 @@ module Api
         @message = I18n.t("errors.authentication.missing_token")
       end
     end
+
+    class AuthenticationFailed < BaseError
+      def initialize
+        @id = SettingErrors.authentication.authentication_failed
+        @message = I18n.t("errors.authentication.authentication_failed")
+      end
+    end
   end
 end
