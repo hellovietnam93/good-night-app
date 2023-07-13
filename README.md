@@ -13,7 +13,7 @@ We require some restful APIS to achieve the following:
 - [x] Setup base API response
 - [x] Add API login
 - [x] Add API create sleep time
-- [] Add API get list sleep time by user
+- [x] Add API get list sleep time by user
 - [] Add API follow user
 
 ## API document

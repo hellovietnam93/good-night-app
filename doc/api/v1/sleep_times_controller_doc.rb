@@ -10,13 +10,23 @@ module Api
         error code: 401, desc: "Unauthorized"
       end
 
+      api :GET, "/v1/sleep_times?user_id=:user_id", "get list sleep times"
+      param_group :authorization
+      param :user_id, String, require: false, desc: "user id if want to list by user"
+      def index; end
+
       api :POST, "/v1/sleep_times", "add new sleep time record"
       param_group :authorization
       param :sleep_time, Hash do
         param :sleep_time, String, "use ISO8601 format. Ex: '2023-07-13T13:43:14Z'"
         param :wake_up_time, String, "use ISO8601 format. Ex: '2023-07-13T13:43:14Z'"
       end
-      def index; end
+      def create; end
+
+      api :GET, "/v1/sleep_times/:id", "get a sleep time record"
+      param_group :authorization
+      param :id, String, require: true, desc: "sleep_time record id"
+      def show; end
     end
   end
 end
