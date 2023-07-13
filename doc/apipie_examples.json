@@ -10,22 +10,22 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "barton_beatty@terry.test",
-          "password": "fiNg31MBdf4"
+          "email": "edna.tremblay@franecki.example",
+          "password": "uaN1IUrj7q"
         }
       },
       "response_data": {
         "data": {
-          "id": "98",
+          "id": "266",
           "type": "user_token",
           "attributes": {
-            "id": 98,
-            "token": "crsXSS8tVu"
+            "id": 266,
+            "token": "mqrwso65nq"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "151",
+                "id": "345",
                 "type": "user"
               }
             }
@@ -48,8 +48,8 @@
       ],
       "query": null,
       "request_data": {
-        "email": "jaleesa_daniel@bernhard-renner.test",
-        "password": "8cSnlFatkMhFyA7S"
+        "email": "alica@conroy.test",
+        "password": "Gju5Ku9Twz4LkCTAP"
       },
       "response_data": {
         "success": false,
@@ -75,7 +75,7 @@
       "request_data": {
         "user": {
           "email": "invalid@invalid.com",
-          "password": "X54L4I7tgGA"
+          "password": "RxBICSY1NCHqKj12"
         }
       },
       "response_data": {
@@ -101,7 +101,7 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "alberto@kassulke.example",
+          "email": "johnie.cummings@dooley.example",
           "password": "INVALID_PASSWORD"
         }
       },
@@ -125,28 +125,28 @@
       "verb": "POST",
       "path": "/api/v1/sleep_times",
       "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-13T14:05:17Z",
-          "wake_up_time": "2023-07-13T16:05:17Z"
+          "sleep_time": "2023-07-13T14:43:16Z",
+          "wake_up_time": "2023-07-13T16:43:16Z"
         }
       },
       "response_data": {
         "data": {
-          "id": "18",
+          "id": "96",
           "type": "sleep_time",
           "attributes": {
-            "id": 18,
-            "sleep_time": "2023-07-13T14:05:17.000Z",
-            "wake_up_time": "2023-07-13T16:05:17.000Z"
+            "id": 96,
+            "sleep_time": "2023-07-13T14:43:16.000Z",
+            "wake_up_time": "2023-07-13T16:43:16.000Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "155",
+                "id": "355",
                 "type": "user"
               }
             }
@@ -165,12 +165,12 @@
       "verb": "POST",
       "path": "/api/v1/sleep_times",
       "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": {
-        "sleep_time": "2023-07-13T14:05:17Z",
-        "wake_up_time": "2023-07-13T16:05:17Z"
+        "sleep_time": "2023-07-13T14:43:16Z",
+        "wake_up_time": "2023-07-13T16:43:16Z"
       },
       "response_data": {
         "success": false,
@@ -190,13 +190,13 @@
       "verb": "POST",
       "path": "/api/v1/sleep_times",
       "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-13T14:05:17Z",
-          "wake_up_time": "2023-07-13T12:05:17Z"
+          "sleep_time": "2023-07-13T14:43:16Z",
+          "wake_up_time": "2023-07-13T12:43:16Z"
         }
       },
       "response_data": {
@@ -215,7 +215,7 @@
       "verb": "POST",
       "path": "/api/v1/sleep_times",
       "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": null,
@@ -237,7 +237,252 @@
       "verb": "POST",
       "path": "/api/v1/sleep_times",
       "versions": [
-
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "sleep_times#index": [
+    {
+      "title": "raise error user not found",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+        "1.0"
+      ],
+      "query": "user_id=NOT_FOUND",
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "user",
+            "message": "user not found"
+          }
+        ]
+      },
+      "code": 404,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return list sleep times of user request",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+        "1.0"
+      ],
+      "query": "user_id=351",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "94",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 94,
+              "sleep_time": "2023-07-13T14:43:16.455Z",
+              "wake_up_time": "2023-07-13T16:43:16.455Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "351",
+                  "type": "user"
+                }
+              }
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return list sleep times of current user",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+        "1.0"
+      ],
+      "query": "user_id=",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "95",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 95,
+              "sleep_time": "2023-07-13T14:43:16.476Z",
+              "wake_up_time": "2023-07-13T16:43:16.476Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "352",
+                  "type": "user"
+                }
+              }
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "sleep_times#show": [
+    {
+      "title": "raise not found error",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/NOT_FOUND",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "sleep_time",
+            "message": "sleep_time not found"
+          }
+        ]
+      },
+      "code": 404,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return sleep time data",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/98",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "98",
+          "type": "sleep_time",
+          "attributes": {
+            "id": 98,
+            "sleep_time": "2023-07-13T14:43:16.599Z",
+            "wake_up_time": "2023-07-13T16:43:16.599Z"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "361",
+                "type": "user"
+              }
+            }
+          }
+        },
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/1",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/1",
+      "versions": [
+        "1.0"
       ],
       "query": null,
       "request_data": null,
@@ -268,12 +513,12 @@
       "response_data": {
         "data": [
           {
-            "id": "160",
+            "id": "364",
             "type": "user",
             "attributes": {
-              "id": 160,
-              "name": "Jessika Waters",
-              "email": "lissa@mcclure-mcdermott.example"
+              "id": 364,
+              "name": "Laura Hegmann",
+              "email": "ardis_rolfson@fadel.test"
             }
           }
         ],
