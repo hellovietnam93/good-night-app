@@ -10,22 +10,22 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "filiberto@stracke.test",
-          "password": "qq6Bsemo7amVS"
+          "email": "barton_beatty@terry.test",
+          "password": "fiNg31MBdf4"
         }
       },
       "response_data": {
         "data": {
-          "id": "65",
+          "id": "98",
           "type": "user_token",
           "attributes": {
-            "id": 65,
-            "token": "YQhqZjJqgM"
+            "id": 98,
+            "token": "crsXSS8tVu"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "115",
+                "id": "151",
                 "type": "user"
               }
             }
@@ -48,8 +48,8 @@
       ],
       "query": null,
       "request_data": {
-        "email": "miles.torphy@mraz-lowe.test",
-        "password": "kY2Vc5VOk7pHc"
+        "email": "jaleesa_daniel@bernhard-renner.test",
+        "password": "8cSnlFatkMhFyA7S"
       },
       "response_data": {
         "success": false,
@@ -75,7 +75,7 @@
       "request_data": {
         "user": {
           "email": "invalid@invalid.com",
-          "password": "WWtoJs22SB8GdUl3B"
+          "password": "X54L4I7tgGA"
         }
       },
       "response_data": {
@@ -101,7 +101,7 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "natalia@pollich.test",
+          "email": "alberto@kassulke.example",
           "password": "INVALID_PASSWORD"
         }
       },
@@ -111,6 +111,142 @@
           {
             "id": "Authentication",
             "message": "Invalid email or password."
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "sleep_times#create": [
+    {
+      "title": "create a sleep_time record",
+      "verb": "POST",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "sleep_record": {
+          "sleep_time": "2023-07-13T14:05:17Z",
+          "wake_up_time": "2023-07-13T16:05:17Z"
+        }
+      },
+      "response_data": {
+        "data": {
+          "id": "18",
+          "type": "sleep_time",
+          "attributes": {
+            "id": 18,
+            "sleep_time": "2023-07-13T14:05:17.000Z",
+            "wake_up_time": "2023-07-13T16:05:17.000Z"
+          },
+          "relationships": {
+            "user": {
+              "data": {
+                "id": "155",
+                "type": "user"
+              }
+            }
+          }
+        },
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "raise error missing params",
+      "verb": "POST",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "sleep_time": "2023-07-13T14:05:17Z",
+        "wake_up_time": "2023-07-13T16:05:17Z"
+      },
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "sleep_record",
+            "message": "params is missing or the value is empty: sleep_record"
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return errors wit invalid time",
+      "verb": "POST",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "sleep_record": {
+          "sleep_time": "2023-07-13T14:05:17Z",
+          "wake_up_time": "2023-07-13T12:05:17Z"
+        }
+      },
+      "response_data": {
+        "errors": {
+          "base": [
+            "Wake up time must be after sleep time"
+          ]
+        }
+      },
+      "code": 422,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "POST",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "POST",
+      "path": "/api/v1/sleep_times",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
           }
         ]
       },
@@ -132,12 +268,12 @@
       "response_data": {
         "data": [
           {
-            "id": "119",
+            "id": "160",
             "type": "user",
             "attributes": {
-              "id": 119,
-              "name": "Clifford Ortiz",
-              "email": "kiara@okon-willms.test"
+              "id": 160,
+              "name": "Jessika Waters",
+              "email": "lissa@mcclure-mcdermott.example"
             }
           }
         ],
