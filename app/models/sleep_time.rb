@@ -2,6 +2,10 @@
 
 class SleepTime < ApplicationRecord
   ###
+  # constants
+  CREATE_PARAMS = %i(sleep_time wake_up_time).freeze
+
+  ###
   # associations
   belongs_to :user
 
