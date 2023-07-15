@@ -7,14 +7,14 @@ module Api
 
       def index
         user = params[:user_id].blank? ? current_user : User.find(params[:user_id])
-        render_jsonapi set_resources(user.sleep_times.order(created_at: :desc))
+        list_sleep_times(set_resources(user.sleep_times.order(created_at: :desc)))
       end
 
       def followees
         sleep_times = SleepTime.in_range(start_time, end_time)
                                .where.not(user_id: current_user.id)
                                .order(duration: :desc)
-        render_jsonapi set_resources(sleep_times, action: :read)
+        list_sleep_times(set_resources(sleep_times, action: :read))
       end
 
       def create
@@ -62,6 +62,11 @@ module Api
         rescue ArgumentError
           raise ::Api::Error::InvalidTimeRange, "end_time"
         end
+      end
+
+      def list_sleep_times sleep_times
+        pagy_info, sleep_times = paginate sleep_times
+        render_jsonapi sleep_times, meta: pagy_info
       end
     end
   end

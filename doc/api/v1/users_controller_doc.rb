@@ -12,14 +12,20 @@ module Api
 
       api :GET, "/v1/users", "get all users"
       param_group :authorization
+      param :page, Integer, require: false
+      param :limit, Integer, require: false
       def index; end
 
       api :GET, "/v1/users/followers", "get all followers of current user"
       param_group :authorization
+      param :page, Integer, require: false
+      param :limit, Integer, require: false
       def followers; end
 
       api :GET, "/v1/users/followees", "get all followees of current user"
       param_group :authorization
+      param :page, Integer, require: false
+      param :limit, Integer, require: false
       def followees; end
 
       api :POST, "/v1/users/:id/follow", "follow user"

@@ -8,12 +8,55 @@ RSpec.describe Api::V1::UsersController, type: :request do
 
   describe "GET /api/v1/users" do
     context "when has auth_token" do
-      before do
-        get "/api/v1/users", headers: authorized_headers(user_token.token)
+      context "without pagination input" do
+        before do
+          get "/api/v1/users", headers: authorized_headers(user_token.token)
+        end
+
+        it "return users data", :show_in_doc, doc_title: "get all users data" do
+          expect(response).to have_http_status(:ok)
+        end
       end
 
-      it "return users data", :show_in_doc, doc_title: "get all users data" do
-        expect(response).to have_http_status(:ok)
+      context "with pagination input" do
+        let(:page) { Settings.pagy.page_default }
+        let(:limit) { Settings.pagy.items_default }
+        let(:params) do
+          {
+            page:,
+            limit:
+          }
+        end
+
+        before do
+          create_list :user, 35
+          get "/api/v1/users", params: params, headers: authorized_headers(user_token.token)
+        end
+
+        context "return data in first page with limit" do
+          it "return users data", :show_in_doc, doc_title: "get all users data" do
+            expect(response).to have_http_status(:ok)
+            expect(json["data"].count).to eq limit
+          end
+        end
+
+        context "return data in last page with limit" do
+          let(:page) { 4 }
+
+          it "return users data", :show_in_doc, doc_title: "get all users data" do
+            expect(response).to have_http_status(:ok)
+            expect(json["data"].count).to eq 6
+          end
+        end
+
+        context "return data with max items permitted" do
+          let(:limit) { Settings.pagy.items_max + 10 }
+
+          it "return users data", :show_in_doc, doc_title: "get all users data" do
+            expect(response).to have_http_status(:ok)
+            expect(json["meta"]["limit"]).to eq Settings.pagy.items_max
+          end
+        end
       end
     end
 

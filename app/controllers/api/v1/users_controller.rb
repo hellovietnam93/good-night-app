@@ -8,15 +8,15 @@ module Api
       before_action :skip_authorize_permission
 
       def index
-        render_jsonapi User.all
+        list_users(User.all)
       end
 
       def followers
-        render_jsonapi current_user.followers(User)
+        list_users(current_user.followers(User))
       end
 
       def followees
-        render_jsonapi current_user.followees(User)
+        list_users(current_user.followees(User))
       end
 
       def follow
@@ -38,6 +38,11 @@ module Api
 
       def user
         @user ||= User.find params[:id]
+      end
+
+      def list_users users
+        pagy_info, users = paginate users
+        render_jsonapi users, meta: pagy_info
       end
     end
   end

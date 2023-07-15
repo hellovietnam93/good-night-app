@@ -6,6 +6,7 @@ module Api
       include ::Api::Helpers::Authentication
       include ::Api::JsonRender
       include ::Api::RescueExceptions
+      include ::Api::Pagination
 
       before_action :authenticate_request!
 

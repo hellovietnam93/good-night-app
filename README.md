@@ -17,7 +17,7 @@ We require some restful APIS to achieve the following:
 - [x] Add API follow user
 - [x] Apply authorization
 - [x] Apply filters on sleep time by followee
-- [] Apply pagination
+- [x] Apply pagination
 
 ## API document
 
