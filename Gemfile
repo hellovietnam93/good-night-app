@@ -7,6 +7,7 @@ ruby '3.1.4'
 
 gem 'apipie-rails', '~> 1.2', '>= 1.2.1'
 gem 'bootsnap', require: false
+gem 'cancancan', '~> 3.5'
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'jsonapi-serializer', '~> 2.2'
 gem 'pg', '~> 1.1'

@@ -5,6 +5,8 @@ module Api
     class UsersController < ApplicationController
       include UsersControllerDoc
 
+      before_action :skip_authorize_permission
+
       def index
         render_jsonapi User.all
       end

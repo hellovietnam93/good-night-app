@@ -4,6 +4,7 @@ module Api
   module V1
     class SessionsController < ApplicationController
       skip_before_action :authenticate_request!
+      before_action :skip_authorize_permission
 
       include SessionsControllerDoc
 

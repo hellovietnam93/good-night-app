@@ -12,5 +12,9 @@ namespace :v1 do
     end
   end
   resources :sessions, only: %i(create)
-  resources :sleep_times, only: %i(create index show)
+  resources :sleep_times, only: %i(create index show) do
+    collection do
+      get :followees
+    end
+  end
 end
