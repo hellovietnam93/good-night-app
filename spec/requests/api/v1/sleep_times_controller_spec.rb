@@ -85,25 +85,89 @@ RSpec.describe Api::V1::SleepTimesController, type: :request do
         before do
           get "/api/v1/sleep_times/followees", headers: authorized_headers(user_token.token)
         end
-        it "raise error user not found", :show_in_doc, doc_title: "raise error user not found" do
+        it "return empty data", :show_in_doc, doc_title: "return empty data" do
           expect(response).to have_http_status(:ok)
           expect(json["data"].count).to eq 0
         end
       end
 
       context "when current_user followed someone" do
+        let(:start_time) { nil }
+        let(:end_time) { nil }
+        let(:params) do
+          {
+            start_time:,
+            end_time:
+          }
+        end
         let(:user_2) { create :user }
+        let(:begining_of_last_week) { 1.week.ago.beginning_of_week }
         let!(:sleep_time_record_2) { create :sleep_time, user: user_2 }
+        let!(:sleep_time_record_3) do
+          create :sleep_time, user: user_2, sleep_time: (begining_of_last_week + 25.hours),
+            wake_up_time: (begining_of_last_week + 29.hours)
+        end
+        let!(:sleep_time_record_4) do
+          create :sleep_time, user: user_2, sleep_time: (begining_of_last_week + 30.hours),
+            wake_up_time: (begining_of_last_week + 31.hours)
+        end
 
         before do
           user.follow!(user_2)
-          get "/api/v1/sleep_times/followees", headers: authorized_headers(user_token.token)
+          get "/api/v1/sleep_times/followees", params:, headers: authorized_headers(user_token.token)
         end
 
-        it "raise error user not found", :show_in_doc, doc_title: "raise error user not found" do
-          expect(response).to have_http_status(:ok)
-          expect(json["data"].count).to eq 1
-          expect(json["data"].first["id"].to_i).to eq sleep_time_record_2.id
+        context "when time range condition is empty" do
+          it "return data of followees", :show_in_doc, doc_title: "return data of followees" do
+            expect(response).to have_http_status(:ok)
+            expect(json["data"].count).to eq 3
+            expect(json["data"][0]["id"].to_i).to eq sleep_time_record_3.id
+          end
+        end
+
+        context "when end time is blank" do
+          context "when start time is invalid format" do
+            let(:start_time) { 2.days.ago }
+
+            it "raturn messsage invalid format for start time", :show_in_doc,
+               doc_title: "raturn messsage invalid format for start time" do
+              expect(response).to have_http_status(:bad_request)
+              expect(json["errors"][0]["message"]).to eq I18n.t("errors.time_range.invalid", field: "start_time")
+            end
+          end
+
+          context "when start time is valid format" do
+            let(:start_time) { 2.days.ago.iso8601 }
+
+            it "return data of followees", :show_in_doc, doc_title: "return data of followees" do
+              expect(response).to have_http_status(:ok)
+              expect(json["data"].count).to eq 1
+              expect(json["data"][0]["id"].to_i).to eq sleep_time_record_2.id
+            end
+          end
+        end
+
+        context "when start time and last time is not blank" do
+          let(:start_time) { begining_of_last_week.iso8601 }
+          context "when end time is invalid format" do
+            let(:end_time) { begining_of_last_week.end_of_week }
+
+            it "raturn messsage invalid format for end time", :show_in_doc,
+               doc_title: "raturn messsage invalid format for end time" do
+              expect(response).to have_http_status(:bad_request)
+              expect(json["errors"][0]["message"]).to eq I18n.t("errors.time_range.invalid", field: "end_time")
+            end
+          end
+
+          context "when end time is valid format" do
+            let(:end_time) { begining_of_last_week.end_of_week.iso8601 }
+
+            it "return data of followees", :show_in_doc, doc_title: "return data of followees" do
+              expect(response).to have_http_status(:ok)
+              expect(json["data"].count).to eq 2
+              expect(json["data"][0]["id"].to_i).to eq sleep_time_record_3.id
+            end
+          end
         end
       end
     end

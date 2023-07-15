@@ -53,5 +53,12 @@ module Api
         @message = I18n.t("errors.user.not_followed")
       end
     end
+
+    class InvalidTimeRange < BaseError
+      def initialize field
+        @id = SettingErrors.time_range.invalid
+        @message = I18n.t("errors.time_range.invalid", field:)
+      end
+    end
   end
 end

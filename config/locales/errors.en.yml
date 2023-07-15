@@ -11,3 +11,5 @@ en:
       self_follow: Cannot follow your self.
       followed: You followed this user.
       not_followed: You do not follow this user.
+    time_range:
+      invalid: Invalid time range for field '%{field}'

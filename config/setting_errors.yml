@@ -5,3 +5,5 @@ user:
   self_follow: Follow
   followed: Follow
   not_followed: Unfollow
+time_range:
+  invalid: Time Range
