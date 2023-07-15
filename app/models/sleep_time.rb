@@ -15,6 +15,16 @@ class SleepTime < ApplicationRecord
   validate :valid_time_range
   validate :no_overlap, on: :create
 
+  ###
+  # scopes
+  scope :in_range, lambda { |start_time, end_time|
+    where(sleep_time: start_time..end_time)
+  }
+
+  ###
+  # callbacks
+  before_validation :set_duration
+
   ################################
   ############ private ###########
   ################################
@@ -31,5 +41,9 @@ class SleepTime < ApplicationRecord
     if SleepTime.where(user_id:).where("(sleep_time, wake_up_time) OVERLAPS (?, ?)", sleep_time, wake_up_time).exists?
       errors.add(:base, "Sleep time overlaps with an existing record")
     end
+  end
+
+  def set_duration
+    self.duration = wake_up_time.to_i - sleep_time.to_i
   end
 end

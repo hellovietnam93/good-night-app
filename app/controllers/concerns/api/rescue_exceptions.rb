@@ -17,6 +17,7 @@ module Api
       rescue_from Api::Error::SelfFollow, with: :self_follow_render_options
       rescue_from Api::Error::Followed, with: :followed_render_options
       rescue_from Api::Error::NotFollowed, with: :not_followed_render_options
+      rescue_from Api::Error::InvalidTimeRange, with: :invalid_time_range_render_options
 
       ###############################
       ########## protected ##########
@@ -56,6 +57,10 @@ module Api
       end
 
       def not_followed_render_options exception
+        render json: exception.to_hash, status: :bad_request, skip_authorize_permission: true
+      end
+
+      def invalid_time_range_render_options exception
         render json: exception.to_hash, status: :bad_request, skip_authorize_permission: true
       end
     end

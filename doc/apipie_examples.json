@@ -10,22 +10,22 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "sherman@hickle.example",
-          "password": "knI4OYK5oPh"
+          "email": "nolan@koss.example",
+          "password": "DG9KGE8MFc"
         }
       },
       "response_data": {
         "data": {
-          "id": "611",
+          "id": "297",
           "type": "user_token",
           "attributes": {
-            "id": 611,
-            "token": "bnkMg4yAFX"
+            "id": 297,
+            "token": "IGptXvPlwj"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "794",
+                "id": "385",
                 "type": "user"
               }
             }
@@ -48,8 +48,8 @@
       ],
       "query": null,
       "request_data": {
-        "email": "arnulfo_bechtelar@trantow-kling.example",
-        "password": "2LohVsDYyIF"
+        "email": "hattie@nitzsche.test",
+        "password": "JR4N4lGRyjuBASwr"
       },
       "response_data": {
         "success": false,
@@ -75,7 +75,7 @@
       "request_data": {
         "user": {
           "email": "invalid@invalid.com",
-          "password": "RGjfqVyCYluc8eplS"
+          "password": "RhfQ1nwJcddL9jR"
         }
       },
       "response_data": {
@@ -101,7 +101,7 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "numbers_kessler@bernier.test",
+          "email": "regina@hand.test",
           "password": "INVALID_PASSWORD"
         }
       },
@@ -130,23 +130,23 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-15T04:11:30Z",
-          "wake_up_time": "2023-07-15T06:11:30Z"
+          "sleep_time": "2023-07-15T05:39:11Z",
+          "wake_up_time": "2023-07-15T07:39:11Z"
         }
       },
       "response_data": {
         "data": {
-          "id": "179",
+          "id": "316",
           "type": "sleep_time",
           "attributes": {
-            "id": 179,
-            "sleep_time": "2023-07-15T04:11:30.000Z",
-            "wake_up_time": "2023-07-15T06:11:30.000Z"
+            "id": 316,
+            "sleep_time": "2023-07-15T05:39:11.000Z",
+            "wake_up_time": "2023-07-15T07:39:11.000Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "811",
+                "id": "410",
                 "type": "user"
               }
             }
@@ -169,8 +169,8 @@
       ],
       "query": null,
       "request_data": {
-        "sleep_time": "2023-07-15T04:11:30Z",
-        "wake_up_time": "2023-07-15T06:11:30Z"
+        "sleep_time": "2023-07-15T05:39:11Z",
+        "wake_up_time": "2023-07-15T07:39:11Z"
       },
       "response_data": {
         "success": false,
@@ -195,8 +195,8 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-15T04:11:30Z",
-          "wake_up_time": "2023-07-15T02:11:30Z"
+          "sleep_time": "2023-07-15T05:39:11Z",
+          "wake_up_time": "2023-07-15T03:39:11Z"
         }
       },
       "response_data": {
@@ -257,7 +257,7 @@
   ],
   "sleep_times#followees": [
     {
-      "title": "raise error user not found",
+      "title": "return empty data",
       "verb": "GET",
       "path": "/api/v1/sleep_times/followees",
       "versions": [
@@ -278,28 +278,197 @@
       "recorded": true
     },
     {
-      "title": "raise error user not found",
+      "title": "return data of followees",
       "verb": "GET",
       "path": "/api/v1/sleep_times/followees",
       "versions": [
         "1.0"
       ],
-      "query": null,
+      "query": "start_time&end_time",
       "request_data": null,
       "response_data": {
         "data": [
           {
-            "id": "178",
+            "id": "298",
             "type": "sleep_time",
             "attributes": {
-              "id": 178,
-              "sleep_time": "2023-07-15T04:11:30.601Z",
-              "wake_up_time": "2023-07-15T06:11:30.601Z"
+              "id": 298,
+              "sleep_time": "2023-07-04T01:00:00.000Z",
+              "wake_up_time": "2023-07-04T05:00:00.000Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "808",
+                  "id": "399",
+                  "type": "user"
+                }
+              }
+            }
+          },
+          {
+            "id": "297",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 297,
+              "sleep_time": "2023-07-15T05:39:11.353Z",
+              "wake_up_time": "2023-07-15T07:39:11.353Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "399",
+                  "type": "user"
+                }
+              }
+            }
+          },
+          {
+            "id": "299",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 299,
+              "sleep_time": "2023-07-04T06:00:00.000Z",
+              "wake_up_time": "2023-07-04T07:00:00.000Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "399",
+                  "type": "user"
+                }
+              }
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "raturn messsage invalid format for start time",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": "start_time=2023-07-13+05%3A39%3A11+UTC&end_time",
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Time Range",
+            "message": "Invalid time range for field 'start_time'"
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return data of followees",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": "start_time=2023-07-13T05%3A39%3A11Z&end_time",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "305",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 305,
+              "sleep_time": "2023-07-15T05:39:11.422Z",
+              "wake_up_time": "2023-07-15T07:39:11.422Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "403",
+                  "type": "user"
+                }
+              }
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "raturn messsage invalid format for end time",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": "start_time=2023-07-03T00%3A00%3A00Z&end_time=2023-07-09+23%3A59%3A59+UTC",
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Time Range",
+            "message": "Invalid time range for field 'end_time'"
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "return data of followees",
+      "verb": "GET",
+      "path": "/api/v1/sleep_times/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": "start_time=2023-07-03T00%3A00%3A00Z&end_time=2023-07-09T23%3A59%3A59Z",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "314",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 314,
+              "sleep_time": "2023-07-04T01:00:00.000Z",
+              "wake_up_time": "2023-07-04T05:00:00.000Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "407",
+                  "type": "user"
+                }
+              }
+            }
+          },
+          {
+            "id": "315",
+            "type": "sleep_time",
+            "attributes": {
+              "id": 315,
+              "sleep_time": "2023-07-04T06:00:00.000Z",
+              "wake_up_time": "2023-07-04T07:00:00.000Z"
+            },
+            "relationships": {
+              "user": {
+                "data": {
+                  "id": "407",
                   "type": "user"
                 }
               }
@@ -389,22 +558,22 @@
       "versions": [
         "1.0"
       ],
-      "query": "user_id=800",
+      "query": "user_id=391",
       "request_data": null,
       "response_data": {
         "data": [
           {
-            "id": "172",
+            "id": "291",
             "type": "sleep_time",
             "attributes": {
-              "id": 172,
-              "sleep_time": "2023-07-15T04:11:30.469Z",
-              "wake_up_time": "2023-07-15T06:11:30.469Z"
+              "id": 291,
+              "sleep_time": "2023-07-15T05:39:11.218Z",
+              "wake_up_time": "2023-07-15T07:39:11.218Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "800",
+                  "id": "391",
                   "type": "user"
                 }
               }
@@ -426,7 +595,7 @@
       "versions": [
         "1.0"
       ],
-      "query": "user_id=802",
+      "query": "user_id=393",
       "request_data": null,
       "response_data": {
         "data": [
@@ -452,17 +621,17 @@
       "response_data": {
         "data": [
           {
-            "id": "175",
+            "id": "294",
             "type": "sleep_time",
             "attributes": {
-              "id": 175,
-              "sleep_time": "2023-07-15T04:11:30.535Z",
-              "wake_up_time": "2023-07-15T06:11:30.535Z"
+              "id": 294,
+              "sleep_time": "2023-07-15T05:39:11.283Z",
+              "wake_up_time": "2023-07-15T07:39:11.284Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "803",
+                  "id": "394",
                   "type": "user"
                 }
               }
@@ -548,7 +717,7 @@
     {
       "title": "return sleep time data",
       "verb": "GET",
-      "path": "/api/v1/sleep_times/181",
+      "path": "/api/v1/sleep_times/318",
       "versions": [
         "1.0"
       ],
@@ -556,17 +725,17 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "181",
+          "id": "318",
           "type": "sleep_time",
           "attributes": {
-            "id": 181,
-            "sleep_time": "2023-07-15T04:11:30.731Z",
-            "wake_up_time": "2023-07-15T06:11:30.731Z"
+            "id": 318,
+            "sleep_time": "2023-07-15T05:39:11.632Z",
+            "wake_up_time": "2023-07-15T07:39:11.632Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "817",
+                "id": "416",
                 "type": "user"
               }
             }
@@ -629,7 +798,7 @@
     {
       "title": "cannot follow themself",
       "verb": "POST",
-      "path": "/api/v1/users/831/follow",
+      "path": "/api/v1/users/430/follow",
       "versions": [
         "1.0"
       ],
@@ -651,7 +820,7 @@
     {
       "title": "follow other user",
       "verb": "POST",
-      "path": "/api/v1/users/833/follow",
+      "path": "/api/v1/users/432/follow",
       "versions": [
         "1.0"
       ],
@@ -659,12 +828,12 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "832",
+          "id": "431",
           "type": "user",
           "attributes": {
-            "id": 832,
-            "name": "Teddy Leannon Ret.",
-            "email": "hal_ortiz@koss-lockman.test"
+            "id": 431,
+            "name": "Keneth Reinger",
+            "email": "carlena_rippin@kuhlman-konopelski.test"
           }
         },
         "meta": {
@@ -678,7 +847,7 @@
     {
       "title": "cannot follow user 2 times",
       "verb": "POST",
-      "path": "/api/v1/users/835/follow",
+      "path": "/api/v1/users/434/follow",
       "versions": [
         "1.0"
       ],
@@ -755,12 +924,12 @@
       "response_data": {
         "data": [
           {
-            "id": "828",
+            "id": "427",
             "type": "user",
             "attributes": {
-              "id": 828,
-              "name": "Reyes Howe",
-              "email": "marla_kshlerin@moore-koelpin.example"
+              "id": 427,
+              "name": "Roseanne Gibson",
+              "email": "lino_quitzon@steuber-ullrich.example"
             }
           }
         ],
@@ -830,12 +999,12 @@
       "response_data": {
         "data": [
           {
-            "id": "824",
+            "id": "423",
             "type": "user",
             "attributes": {
-              "id": 824,
-              "name": "Parker Huel",
-              "email": "bobbye.monahan@kunde-muller.test"
+              "id": 423,
+              "name": "Evelia Blanda",
+              "email": "moira.abshire@pouros-christiansen.example"
             }
           }
         ],
@@ -905,12 +1074,12 @@
       "response_data": {
         "data": [
           {
-            "id": "820",
+            "id": "419",
             "type": "user",
             "attributes": {
-              "id": 820,
-              "name": "Teodoro Carter",
-              "email": "kamilah_zemlak@muller.example"
+              "id": 419,
+              "name": "Margorie Heller",
+              "email": "emmett_russel@torp.test"
             }
           }
         ],
@@ -971,7 +1140,7 @@
     {
       "title": "unfollow other user",
       "verb": "POST",
-      "path": "/api/v1/users/839/unfollow",
+      "path": "/api/v1/users/438/unfollow",
       "versions": [
         "1.0"
       ],
@@ -979,12 +1148,12 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "838",
+          "id": "437",
           "type": "user",
           "attributes": {
-            "id": 838,
-            "name": "Fred Ryan",
-            "email": "samuel.boyer@gerhold-spinka.test"
+            "id": 437,
+            "name": "Arden Steuber Ret.",
+            "email": "robin@dibbert.test"
           }
         },
         "meta": {
@@ -998,7 +1167,7 @@
     {
       "title": "annot unfollow user if not followed",
       "verb": "POST",
-      "path": "/api/v1/users/841/unfollow",
+      "path": "/api/v1/users/440/unfollow",
       "versions": [
         "1.0"
       ],
