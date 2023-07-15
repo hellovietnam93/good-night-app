@@ -1,0 +1,11 @@
+pagy:
+  instances:
+    vars: vars
+  items_default: 10
+  items_max: 100
+  page_default: 1
+  available_limit:
+    - 10
+    - 25
+    - 50
+    - 100

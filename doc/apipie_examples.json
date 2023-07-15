@@ -10,22 +10,22 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "nolan@koss.example",
-          "password": "DG9KGE8MFc"
+          "email": "johnny.frami@oconner.test",
+          "password": "iVgjwQwDU1D59r5w5Kpy"
         }
       },
       "response_data": {
         "data": {
-          "id": "297",
+          "id": "1029",
           "type": "user_token",
           "attributes": {
-            "id": 297,
-            "token": "IGptXvPlwj"
+            "id": 1029,
+            "token": "A09QqVdVSK"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "385",
+                "id": "1950",
                 "type": "user"
               }
             }
@@ -48,8 +48,8 @@
       ],
       "query": null,
       "request_data": {
-        "email": "hattie@nitzsche.test",
-        "password": "JR4N4lGRyjuBASwr"
+        "email": "harriet_towne@gislason.test",
+        "password": "ahDvJF4Jgvv"
       },
       "response_data": {
         "success": false,
@@ -75,7 +75,7 @@
       "request_data": {
         "user": {
           "email": "invalid@invalid.com",
-          "password": "RhfQ1nwJcddL9jR"
+          "password": "S8FM56nUcIcN5jbu"
         }
       },
       "response_data": {
@@ -101,7 +101,7 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "regina@hand.test",
+          "email": "lyla@damore.example",
           "password": "INVALID_PASSWORD"
         }
       },
@@ -130,23 +130,23 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-15T05:39:11Z",
-          "wake_up_time": "2023-07-15T07:39:11Z"
+          "sleep_time": "2023-07-15T06:18:00Z",
+          "wake_up_time": "2023-07-15T08:18:00Z"
         }
       },
       "response_data": {
         "data": {
-          "id": "316",
+          "id": "842",
           "type": "sleep_time",
           "attributes": {
-            "id": 316,
-            "sleep_time": "2023-07-15T05:39:11.000Z",
-            "wake_up_time": "2023-07-15T07:39:11.000Z"
+            "id": 842,
+            "sleep_time": "2023-07-15T06:18:00.000Z",
+            "wake_up_time": "2023-07-15T08:18:00.000Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "410",
+                "id": "1975",
                 "type": "user"
               }
             }
@@ -169,8 +169,8 @@
       ],
       "query": null,
       "request_data": {
-        "sleep_time": "2023-07-15T05:39:11Z",
-        "wake_up_time": "2023-07-15T07:39:11Z"
+        "sleep_time": "2023-07-15T06:18:00Z",
+        "wake_up_time": "2023-07-15T08:18:00Z"
       },
       "response_data": {
         "success": false,
@@ -195,8 +195,8 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-15T05:39:11Z",
-          "wake_up_time": "2023-07-15T03:39:11Z"
+          "sleep_time": "2023-07-15T06:18:00Z",
+          "wake_up_time": "2023-07-15T04:18:00Z"
         }
       },
       "response_data": {
@@ -270,6 +270,21 @@
 
         ],
         "meta": {
+          "count": 0,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 0,
+          "to": 0,
+          "in": 0,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -289,51 +304,51 @@
       "response_data": {
         "data": [
           {
-            "id": "298",
+            "id": "824",
             "type": "sleep_time",
             "attributes": {
-              "id": 298,
+              "id": 824,
               "sleep_time": "2023-07-04T01:00:00.000Z",
               "wake_up_time": "2023-07-04T05:00:00.000Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "399",
+                  "id": "1964",
                   "type": "user"
                 }
               }
             }
           },
           {
-            "id": "297",
+            "id": "823",
             "type": "sleep_time",
             "attributes": {
-              "id": 297,
-              "sleep_time": "2023-07-15T05:39:11.353Z",
-              "wake_up_time": "2023-07-15T07:39:11.353Z"
+              "id": 823,
+              "sleep_time": "2023-07-15T06:18:00.286Z",
+              "wake_up_time": "2023-07-15T08:18:00.286Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "399",
+                  "id": "1964",
                   "type": "user"
                 }
               }
             }
           },
           {
-            "id": "299",
+            "id": "825",
             "type": "sleep_time",
             "attributes": {
-              "id": 299,
+              "id": 825,
               "sleep_time": "2023-07-04T06:00:00.000Z",
               "wake_up_time": "2023-07-04T07:00:00.000Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "399",
+                  "id": "1964",
                   "type": "user"
                 }
               }
@@ -341,6 +356,21 @@
           }
         ],
         "meta": {
+          "count": 3,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 3,
+          "in": 3,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -355,7 +385,7 @@
       "versions": [
         "1.0"
       ],
-      "query": "start_time=2023-07-13+05%3A39%3A11+UTC&end_time",
+      "query": "start_time=2023-07-13+06%3A18%3A00+UTC&end_time",
       "request_data": null,
       "response_data": {
         "success": false,
@@ -377,22 +407,22 @@
       "versions": [
         "1.0"
       ],
-      "query": "start_time=2023-07-13T05%3A39%3A11Z&end_time",
+      "query": "start_time=2023-07-13T06%3A18%3A00Z&end_time",
       "request_data": null,
       "response_data": {
         "data": [
           {
-            "id": "305",
+            "id": "831",
             "type": "sleep_time",
             "attributes": {
-              "id": 305,
-              "sleep_time": "2023-07-15T05:39:11.422Z",
-              "wake_up_time": "2023-07-15T07:39:11.422Z"
+              "id": 831,
+              "sleep_time": "2023-07-15T06:18:00.364Z",
+              "wake_up_time": "2023-07-15T08:18:00.364Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "403",
+                  "id": "1968",
                   "type": "user"
                 }
               }
@@ -400,6 +430,21 @@
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -441,34 +486,34 @@
       "response_data": {
         "data": [
           {
-            "id": "314",
+            "id": "840",
             "type": "sleep_time",
             "attributes": {
-              "id": 314,
+              "id": 840,
               "sleep_time": "2023-07-04T01:00:00.000Z",
               "wake_up_time": "2023-07-04T05:00:00.000Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "407",
+                  "id": "1972",
                   "type": "user"
                 }
               }
             }
           },
           {
-            "id": "315",
+            "id": "841",
             "type": "sleep_time",
             "attributes": {
-              "id": 315,
+              "id": 841,
               "sleep_time": "2023-07-04T06:00:00.000Z",
               "wake_up_time": "2023-07-04T07:00:00.000Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "407",
+                  "id": "1972",
                   "type": "user"
                 }
               }
@@ -476,6 +521,21 @@
           }
         ],
         "meta": {
+          "count": 2,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 2,
+          "in": 2,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -558,22 +618,22 @@
       "versions": [
         "1.0"
       ],
-      "query": "user_id=391",
+      "query": "user_id=1956",
       "request_data": null,
       "response_data": {
         "data": [
           {
-            "id": "291",
+            "id": "817",
             "type": "sleep_time",
             "attributes": {
-              "id": 291,
-              "sleep_time": "2023-07-15T05:39:11.218Z",
-              "wake_up_time": "2023-07-15T07:39:11.218Z"
+              "id": 817,
+              "sleep_time": "2023-07-15T06:18:00.131Z",
+              "wake_up_time": "2023-07-15T08:18:00.131Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "391",
+                  "id": "1956",
                   "type": "user"
                 }
               }
@@ -581,6 +641,21 @@
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -595,13 +670,28 @@
       "versions": [
         "1.0"
       ],
-      "query": "user_id=393",
+      "query": "user_id=1958",
       "request_data": null,
       "response_data": {
         "data": [
 
         ],
         "meta": {
+          "count": 0,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 0,
+          "to": 0,
+          "in": 0,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -621,17 +711,17 @@
       "response_data": {
         "data": [
           {
-            "id": "294",
+            "id": "820",
             "type": "sleep_time",
             "attributes": {
-              "id": 294,
-              "sleep_time": "2023-07-15T05:39:11.283Z",
-              "wake_up_time": "2023-07-15T07:39:11.284Z"
+              "id": 820,
+              "sleep_time": "2023-07-15T06:18:00.208Z",
+              "wake_up_time": "2023-07-15T08:18:00.208Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "394",
+                  "id": "1959",
                   "type": "user"
                 }
               }
@@ -639,6 +729,21 @@
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -717,7 +822,7 @@
     {
       "title": "return sleep time data",
       "verb": "GET",
-      "path": "/api/v1/sleep_times/318",
+      "path": "/api/v1/sleep_times/844",
       "versions": [
         "1.0"
       ],
@@ -725,17 +830,17 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "318",
+          "id": "844",
           "type": "sleep_time",
           "attributes": {
-            "id": 318,
-            "sleep_time": "2023-07-15T05:39:11.632Z",
-            "wake_up_time": "2023-07-15T07:39:11.632Z"
+            "id": 844,
+            "sleep_time": "2023-07-15T06:18:00.604Z",
+            "wake_up_time": "2023-07-15T08:18:00.604Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "416",
+                "id": "1981",
                 "type": "user"
               }
             }
@@ -798,7 +903,7 @@
     {
       "title": "cannot follow themself",
       "verb": "POST",
-      "path": "/api/v1/users/430/follow",
+      "path": "/api/v1/users/2103/follow",
       "versions": [
         "1.0"
       ],
@@ -820,7 +925,7 @@
     {
       "title": "follow other user",
       "verb": "POST",
-      "path": "/api/v1/users/432/follow",
+      "path": "/api/v1/users/2105/follow",
       "versions": [
         "1.0"
       ],
@@ -828,12 +933,12 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "431",
+          "id": "2104",
           "type": "user",
           "attributes": {
-            "id": 431,
-            "name": "Keneth Reinger",
-            "email": "carlena_rippin@kuhlman-konopelski.test"
+            "id": 2104,
+            "name": "Gov. Lindsay Predovic",
+            "email": "shaniqua@turner-mills.test"
           }
         },
         "meta": {
@@ -847,7 +952,7 @@
     {
       "title": "cannot follow user 2 times",
       "verb": "POST",
-      "path": "/api/v1/users/434/follow",
+      "path": "/api/v1/users/2107/follow",
       "versions": [
         "1.0"
       ],
@@ -924,16 +1029,31 @@
       "response_data": {
         "data": [
           {
-            "id": "427",
+            "id": "2100",
             "type": "user",
             "attributes": {
-              "id": 427,
-              "name": "Roseanne Gibson",
-              "email": "lino_quitzon@steuber-ullrich.example"
+              "id": 2100,
+              "name": "Brittanie Weimann",
+              "email": "shaina_parker@christiansen.test"
             }
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -999,16 +1119,31 @@
       "response_data": {
         "data": [
           {
-            "id": "423",
+            "id": "2096",
             "type": "user",
             "attributes": {
-              "id": 423,
-              "name": "Evelia Blanda",
-              "email": "moira.abshire@pouros-christiansen.example"
+              "id": 2096,
+              "name": "Rosalind Rosenbaum",
+              "email": "guy_ankunding@dare-moore.test"
             }
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
         },
         "success": true
       },
@@ -1074,16 +1209,604 @@
       "response_data": {
         "data": [
           {
-            "id": "419",
+            "id": "1984",
             "type": "user",
             "attributes": {
-              "id": 419,
-              "name": "Margorie Heller",
-              "email": "emmett_russel@torp.test"
+              "id": 1984,
+              "name": "Evan Bauch",
+              "email": "toby.schuppe@cremin.example"
             }
           }
         ],
         "meta": {
+          "count": 1,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 1,
+          "in": 1,
+          "prev": null,
+          "next": null,
+          "limit": 10
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "get all users data",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": "page=1&limit=10",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "1985",
+            "type": "user",
+            "attributes": {
+              "id": 1985,
+              "name": "Hoyt Adams",
+              "email": "joseph_volkman@lowe.test"
+            }
+          },
+          {
+            "id": "1986",
+            "type": "user",
+            "attributes": {
+              "id": 1986,
+              "name": "Pres. Lida Schmeler",
+              "email": "ema@swaniawski-dibbert.test"
+            }
+          },
+          {
+            "id": "1987",
+            "type": "user",
+            "attributes": {
+              "id": 1987,
+              "name": "Landon Williamson",
+              "email": "cherlyn@kessler-romaguera.example"
+            }
+          },
+          {
+            "id": "1988",
+            "type": "user",
+            "attributes": {
+              "id": 1988,
+              "name": "Jeromy Sipes",
+              "email": "filiberto@cummerata-langworth.example"
+            }
+          },
+          {
+            "id": "1989",
+            "type": "user",
+            "attributes": {
+              "id": 1989,
+              "name": "Lamont Torp",
+              "email": "raul@quigley-lindgren.example"
+            }
+          },
+          {
+            "id": "1990",
+            "type": "user",
+            "attributes": {
+              "id": 1990,
+              "name": "Amb. Federico Kiehn",
+              "email": "garry_crooks@brakus.example"
+            }
+          },
+          {
+            "id": "1991",
+            "type": "user",
+            "attributes": {
+              "id": 1991,
+              "name": "Nathan Lesch",
+              "email": "luke_kreiger@wiegand-mcclure.test"
+            }
+          },
+          {
+            "id": "1992",
+            "type": "user",
+            "attributes": {
+              "id": 1992,
+              "name": "Rudolph Pagac",
+              "email": "keith.windler@homenick.test"
+            }
+          },
+          {
+            "id": "1993",
+            "type": "user",
+            "attributes": {
+              "id": 1993,
+              "name": "Gabriella Bartell",
+              "email": "anton_douglas@abernathy.test"
+            }
+          },
+          {
+            "id": "1994",
+            "type": "user",
+            "attributes": {
+              "id": 1994,
+              "name": "Brock Prohaska",
+              "email": "sandy.romaguera@bauch.example"
+            }
+          }
+        ],
+        "meta": {
+          "count": 36,
+          "page": 1,
+          "outset": 0,
+          "items": 10,
+          "last": 4,
+          "pages": 4,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 10,
+          "in": 10,
+          "prev": null,
+          "next": 2,
+          "limit": 10
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "get all users data",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": "page=4&limit=10",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "2051",
+            "type": "user",
+            "attributes": {
+              "id": 2051,
+              "name": "Dr. Frances Cremin",
+              "email": "alberto@goldner.test"
+            }
+          },
+          {
+            "id": "2052",
+            "type": "user",
+            "attributes": {
+              "id": 2052,
+              "name": "Rickie Fay",
+              "email": "burl_rath@prosacco.test"
+            }
+          },
+          {
+            "id": "2053",
+            "type": "user",
+            "attributes": {
+              "id": 2053,
+              "name": "Jerold Dicki II",
+              "email": "nancee@boyer.test"
+            }
+          },
+          {
+            "id": "2054",
+            "type": "user",
+            "attributes": {
+              "id": 2054,
+              "name": "Kenyetta Cole",
+              "email": "latonya.goodwin@russel.test"
+            }
+          },
+          {
+            "id": "2055",
+            "type": "user",
+            "attributes": {
+              "id": 2055,
+              "name": "Santos Turner",
+              "email": "samantha.effertz@runte-tillman.test"
+            }
+          },
+          {
+            "id": "2056",
+            "type": "user",
+            "attributes": {
+              "id": 2056,
+              "name": "Mrs. Scottie Stroman",
+              "email": "enrique@deckow.test"
+            }
+          }
+        ],
+        "meta": {
+          "count": 36,
+          "page": 4,
+          "outset": 0,
+          "items": 10,
+          "last": 4,
+          "pages": 4,
+          "offset": 30,
+          "params": {
+          },
+          "from": 31,
+          "to": 36,
+          "in": 6,
+          "prev": 3,
+          "next": null,
+          "limit": 10
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "get all users data",
+      "verb": "GET",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": "page=1&limit=110",
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "2057",
+            "type": "user",
+            "attributes": {
+              "id": 2057,
+              "name": "Cyndi Legros",
+              "email": "enedina.roob@quigley.example"
+            }
+          },
+          {
+            "id": "2058",
+            "type": "user",
+            "attributes": {
+              "id": 2058,
+              "name": "Amb. Shelton Pfeffer",
+              "email": "johnie_green@upton-schumm.test"
+            }
+          },
+          {
+            "id": "2059",
+            "type": "user",
+            "attributes": {
+              "id": 2059,
+              "name": "Matilda Fadel",
+              "email": "samella@emmerich.test"
+            }
+          },
+          {
+            "id": "2060",
+            "type": "user",
+            "attributes": {
+              "id": 2060,
+              "name": "Arlean Weber",
+              "email": "deirdre@fadel-cronin.test"
+            }
+          },
+          {
+            "id": "2061",
+            "type": "user",
+            "attributes": {
+              "id": 2061,
+              "name": "Luvenia Botsford",
+              "email": "benny@cummerata.example"
+            }
+          },
+          {
+            "id": "2062",
+            "type": "user",
+            "attributes": {
+              "id": 2062,
+              "name": "Bernie Hagenes",
+              "email": "tammi@glover-cassin.test"
+            }
+          },
+          {
+            "id": "2063",
+            "type": "user",
+            "attributes": {
+              "id": 2063,
+              "name": "Beverley Mueller",
+              "email": "reginald@pfannerstill.example"
+            }
+          },
+          {
+            "id": "2064",
+            "type": "user",
+            "attributes": {
+              "id": 2064,
+              "name": "Pres. Calvin Skiles",
+              "email": "jeanette.hayes@runolfsdottir.test"
+            }
+          },
+          {
+            "id": "2065",
+            "type": "user",
+            "attributes": {
+              "id": 2065,
+              "name": "Normand Swaniawski",
+              "email": "dolores@feest.test"
+            }
+          },
+          {
+            "id": "2066",
+            "type": "user",
+            "attributes": {
+              "id": 2066,
+              "name": "Denver Dickens VM",
+              "email": "fidel_wolff@rohan-hilpert.example"
+            }
+          },
+          {
+            "id": "2067",
+            "type": "user",
+            "attributes": {
+              "id": 2067,
+              "name": "Arminda Hettinger",
+              "email": "erick.trantow@pfannerstill.example"
+            }
+          },
+          {
+            "id": "2068",
+            "type": "user",
+            "attributes": {
+              "id": 2068,
+              "name": "Williams Ullrich",
+              "email": "veronica@jerde.example"
+            }
+          },
+          {
+            "id": "2069",
+            "type": "user",
+            "attributes": {
+              "id": 2069,
+              "name": "Kendrick Barton",
+              "email": "marcy.schaefer@moen-yost.test"
+            }
+          },
+          {
+            "id": "2070",
+            "type": "user",
+            "attributes": {
+              "id": 2070,
+              "name": "Daniela Terry",
+              "email": "luba_okon@stamm-olson.test"
+            }
+          },
+          {
+            "id": "2071",
+            "type": "user",
+            "attributes": {
+              "id": 2071,
+              "name": "Hugo Lowe",
+              "email": "major@goyette-terry.test"
+            }
+          },
+          {
+            "id": "2072",
+            "type": "user",
+            "attributes": {
+              "id": 2072,
+              "name": "Darline McGlynn",
+              "email": "lamont_romaguera@hane.example"
+            }
+          },
+          {
+            "id": "2073",
+            "type": "user",
+            "attributes": {
+              "id": 2073,
+              "name": "Cori Larson",
+              "email": "renna_ryan@corkery-boehm.test"
+            }
+          },
+          {
+            "id": "2074",
+            "type": "user",
+            "attributes": {
+              "id": 2074,
+              "name": "Zelma Mayer Jr.",
+              "email": "lawerence.boehm@maggio.example"
+            }
+          },
+          {
+            "id": "2075",
+            "type": "user",
+            "attributes": {
+              "id": 2075,
+              "name": "Ike Hansen",
+              "email": "billy.robel@nicolas-satterfield.example"
+            }
+          },
+          {
+            "id": "2076",
+            "type": "user",
+            "attributes": {
+              "id": 2076,
+              "name": "Anamaria Kuhlman",
+              "email": "andera@pollich-borer.example"
+            }
+          },
+          {
+            "id": "2077",
+            "type": "user",
+            "attributes": {
+              "id": 2077,
+              "name": "Bambi Harber",
+              "email": "jettie_durgan@cummerata.test"
+            }
+          },
+          {
+            "id": "2078",
+            "type": "user",
+            "attributes": {
+              "id": 2078,
+              "name": "Kristofer Pollich",
+              "email": "ebony@bernier.example"
+            }
+          },
+          {
+            "id": "2079",
+            "type": "user",
+            "attributes": {
+              "id": 2079,
+              "name": "Elmo Runolfsson LLD",
+              "email": "neil.hilll@morar-abbott.example"
+            }
+          },
+          {
+            "id": "2080",
+            "type": "user",
+            "attributes": {
+              "id": 2080,
+              "name": "Byron Fadel Sr.",
+              "email": "chantell@damore-schumm.example"
+            }
+          },
+          {
+            "id": "2081",
+            "type": "user",
+            "attributes": {
+              "id": 2081,
+              "name": "The Hon. Cassy Kuphal",
+              "email": "hubert@macgyver.test"
+            }
+          },
+          {
+            "id": "2082",
+            "type": "user",
+            "attributes": {
+              "id": 2082,
+              "name": "Sen. Reggie Lakin",
+              "email": "cindy@fahey.example"
+            }
+          },
+          {
+            "id": "2083",
+            "type": "user",
+            "attributes": {
+              "id": 2083,
+              "name": "Wan Aufderhar",
+              "email": "ignacio_gleichner@grant.example"
+            }
+          },
+          {
+            "id": "2084",
+            "type": "user",
+            "attributes": {
+              "id": 2084,
+              "name": "Trent Langworth",
+              "email": "lindsay.strosin@doyle.test"
+            }
+          },
+          {
+            "id": "2085",
+            "type": "user",
+            "attributes": {
+              "id": 2085,
+              "name": "Rep. Shirely Howell",
+              "email": "may@koelpin.test"
+            }
+          },
+          {
+            "id": "2086",
+            "type": "user",
+            "attributes": {
+              "id": 2086,
+              "name": "Mrs. Merry Christiansen",
+              "email": "randolph.connelly@dietrich-bashirian.test"
+            }
+          },
+          {
+            "id": "2087",
+            "type": "user",
+            "attributes": {
+              "id": 2087,
+              "name": "Mrs. Sharolyn Moore",
+              "email": "wava.towne@kerluke.example"
+            }
+          },
+          {
+            "id": "2088",
+            "type": "user",
+            "attributes": {
+              "id": 2088,
+              "name": "Marlon Macejkovic",
+              "email": "beverlee@ernser.example"
+            }
+          },
+          {
+            "id": "2089",
+            "type": "user",
+            "attributes": {
+              "id": 2089,
+              "name": "Donna Ortiz",
+              "email": "quiana@bergstrom.example"
+            }
+          },
+          {
+            "id": "2090",
+            "type": "user",
+            "attributes": {
+              "id": 2090,
+              "name": "Sergio Hoeger",
+              "email": "bryan_oberbrunner@goldner-pouros.test"
+            }
+          },
+          {
+            "id": "2091",
+            "type": "user",
+            "attributes": {
+              "id": 2091,
+              "name": "Fr. Chanell Walsh",
+              "email": "tish@thompson.test"
+            }
+          },
+          {
+            "id": "2092",
+            "type": "user",
+            "attributes": {
+              "id": 2092,
+              "name": "Jamel Johnston",
+              "email": "edwardo_cassin@spinka-heidenreich.test"
+            }
+          }
+        ],
+        "meta": {
+          "count": 36,
+          "page": 1,
+          "outset": 0,
+          "items": 100,
+          "last": 1,
+          "pages": 1,
+          "offset": 0,
+          "params": {
+          },
+          "from": 1,
+          "to": 36,
+          "in": 36,
+          "prev": null,
+          "next": null,
+          "limit": 100
         },
         "success": true
       },
@@ -1140,7 +1863,7 @@
     {
       "title": "unfollow other user",
       "verb": "POST",
-      "path": "/api/v1/users/438/unfollow",
+      "path": "/api/v1/users/2111/unfollow",
       "versions": [
         "1.0"
       ],
@@ -1148,12 +1871,12 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "437",
+          "id": "2110",
           "type": "user",
           "attributes": {
-            "id": 437,
-            "name": "Arden Steuber Ret.",
-            "email": "robin@dibbert.test"
+            "id": 2110,
+            "name": "Amb. Zola O'Hara",
+            "email": "emerson.wiegand@hodkiewicz.test"
           }
         },
         "meta": {
@@ -1167,7 +1890,7 @@
     {
       "title": "annot unfollow user if not followed",
       "verb": "POST",
-      "path": "/api/v1/users/440/unfollow",
+      "path": "/api/v1/users/2113/unfollow",
       "versions": [
         "1.0"
       ],

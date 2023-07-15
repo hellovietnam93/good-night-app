@@ -10,6 +10,7 @@ gem 'bootsnap', require: false
 gem 'cancancan', '~> 3.5'
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'jsonapi-serializer', '~> 2.2'
+gem 'pagy', '~> 6.0', '>= 6.0.4'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'

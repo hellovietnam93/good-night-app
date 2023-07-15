@@ -13,6 +13,8 @@ module Api
       api :GET, "/v1/sleep_times?user_id=:user_id", "get list sleep times"
       param_group :authorization
       param :user_id, String, require: false, desc: "user id if want to list by user"
+      param :page, Integer, require: false
+      param :limit, Integer, require: false
       def index; end
 
       api :GET, "/v1/sleep_times/followees", "get list sleep times of all followees"
@@ -20,6 +22,8 @@ module Api
       param :start_time, String, require: false,
 desc: "Format: ISO8601. Ex: '2023-07-13T13:43:14Z'. Default one week ago"
       param :end_time, String, require: false, desc: "Format: ISO8601. Ex: '2023-07-13T13:43:14Z'. Default current time"
+      param :page, Integer, require: false
+      param :limit, Integer, require: false
       def followees; end
 
       api :POST, "/v1/sleep_times", "add new sleep time record"
