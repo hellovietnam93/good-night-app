@@ -251,6 +251,8 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    socialization (2.0.1)
+      activerecord
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -290,6 +292,7 @@ DEPENDENCIES
   settingslogic (~> 2.0, >= 2.0.9)
   shoulda-matchers (~> 5.3)
   simplecov (~> 0.22.0)
+  socialization (~> 2.0, >= 2.0.1)
   tzinfo-data
 
 RUBY VERSION

@@ -14,7 +14,7 @@ We require some restful APIS to achieve the following:
 - [x] Add API login
 - [x] Add API create sleep time
 - [x] Add API get list sleep time by user
-- [] Add API follow user
+- [x] Add API follow user
 
 ## API document
 
