@@ -26,37 +26,37 @@ module Api
 
       def render_invalid_params_response error, status: :bad_request
         error = Api::Error::InvalidParamster.new id: error.param
-        render json: error.to_hash, status:
+        render json: error.to_hash, status:, skip_authorize_permission: true
       end
 
       def render_unprocessable_entity_response exception, status: :bad_request
         error = ActiveRecordValidation::Error.new record: exception.record
-        render json: error.to_hash, status:
+        render json: error.to_hash, status:, skip_authorize_permission: true
       end
 
       def render_resource_not_found_response exception, status: :not_found
         error = Api::Error::RecordNotFound.new error: exception
-        render json: error.to_hash, status:
+        render json: error.to_hash, status:, skip_authorize_permission: true
       end
 
       def missing_token_render_options exception
-        render json: exception.to_hash, status: :unauthorized
+        render json: exception.to_hash, status: :unauthorized, skip_authorize_permission: true
       end
 
       def authentication_failed_render_options exception
-        render json: exception.to_hash, status: :unauthorized
+        render json: exception.to_hash, status: :unauthorized, skip_authorize_permission: true
       end
 
       def self_follow_render_options exception
-        render json: exception.to_hash, status: :bad_request
+        render json: exception.to_hash, status: :bad_request, skip_authorize_permission: true
       end
 
       def followed_render_options exception
-        render json: exception.to_hash, status: :bad_request
+        render json: exception.to_hash, status: :bad_request, skip_authorize_permission: true
       end
 
       def not_followed_render_options exception
-        render json: exception.to_hash, status: :bad_request
+        render json: exception.to_hash, status: :bad_request, skip_authorize_permission: true
       end
     end
   end

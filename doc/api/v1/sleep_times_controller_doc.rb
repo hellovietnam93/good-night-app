@@ -15,6 +15,10 @@ module Api
       param :user_id, String, require: false, desc: "user id if want to list by user"
       def index; end
 
+      api :GET, "/v1/sleep_times/followees", "get list sleep times of all followees"
+      param_group :authorization
+      def followees; end
+
       api :POST, "/v1/sleep_times", "add new sleep time record"
       param_group :authorization
       param :sleep_time, Hash do

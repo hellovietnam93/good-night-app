@@ -3,6 +3,7 @@
 module Api
   module V1
     class ApplicationController < ::ApplicationController
+      include ::Api::Helpers::Authentication
       include ::Api::JsonRender
       include ::Api::RescueExceptions
 

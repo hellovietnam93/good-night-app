@@ -15,6 +15,9 @@ We require some restful APIS to achieve the following:
 - [x] Add API create sleep time
 - [x] Add API get list sleep time by user
 - [x] Add API follow user
+- [x] Apply authorization
+- [] Apply filters on sleep time by followee
+- [] Apply pagination
 
 ## API document
 

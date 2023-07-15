@@ -30,15 +30,31 @@ RSpec.describe Api::V1::SleepTimesController, type: :request do
           let(:user_2) { create :user }
           let(:user_id) { user_2.id }
           let!(:sleep_time_record_2) { create :sleep_time, user: user_2 }
-          before do
-            get "/api/v1/sleep_times?user_id=#{user_id}", headers: authorized_headers(user_token.token)
+
+          context "when followed" do
+            before do
+              user.follow!(user_2)
+              get "/api/v1/sleep_times?user_id=#{user_id}", headers: authorized_headers(user_token.token)
+            end
+
+            it "return list sleep times of user request", :show_in_doc,
+               doc_title: "return list sleep times of user request" do
+              expect(response).to have_http_status(:ok)
+              expect(json["data"].count).to eq 1
+              expect(json["data"].first["id"].to_i).to eq sleep_time_record_2.id
+            end
           end
 
-          it "return list sleep times of user request", :show_in_doc,
-             doc_title: "return list sleep times of user request" do
-            expect(response).to have_http_status(:ok)
-            expect(json["data"].count).to eq 1
-            expect(json["data"].first["id"].to_i).to eq sleep_time_record_2.id
+          context "when not followed" do
+            before do
+              get "/api/v1/sleep_times?user_id=#{user_id}", headers: authorized_headers(user_token.token)
+            end
+
+            it "return list sleep times of user request", :show_in_doc,
+               doc_title: "return list sleep times of user request" do
+              expect(response).to have_http_status(:ok)
+              expect(json["data"].count).to eq 0
+            end
           end
         end
       end
@@ -58,6 +74,41 @@ RSpec.describe Api::V1::SleepTimesController, type: :request do
     end
 
     include_examples "unauthorized request", "get", "/api/v1/sleep_times"
+  end
+
+  describe "GET /api/v1/sleep_times/followees" do
+    context "when has auth_token" do
+      let(:user_id) { nil }
+      let!(:sleep_time_record) { create :sleep_time, user: }
+
+      context "when current_user did no follow anyone" do
+        before do
+          get "/api/v1/sleep_times/followees", headers: authorized_headers(user_token.token)
+        end
+        it "raise error user not found", :show_in_doc, doc_title: "raise error user not found" do
+          expect(response).to have_http_status(:ok)
+          expect(json["data"].count).to eq 0
+        end
+      end
+
+      context "when current_user followed someone" do
+        let(:user_2) { create :user }
+        let!(:sleep_time_record_2) { create :sleep_time, user: user_2 }
+
+        before do
+          user.follow!(user_2)
+          get "/api/v1/sleep_times/followees", headers: authorized_headers(user_token.token)
+        end
+
+        it "raise error user not found", :show_in_doc, doc_title: "raise error user not found" do
+          expect(response).to have_http_status(:ok)
+          expect(json["data"].count).to eq 1
+          expect(json["data"].first["id"].to_i).to eq sleep_time_record_2.id
+        end
+      end
+    end
+
+    include_examples "unauthorized request", "get", "/api/v1/sleep_times/followees"
   end
 
   describe "POST /api/v1/sleep_times" do
