@@ -13,6 +13,24 @@ module Api
       api :GET, "/v1/users", "get all users"
       param_group :authorization
       def index; end
+
+      api :GET, "/v1/users/followers", "get all followers of current user"
+      param_group :authorization
+      def followers; end
+
+      api :GET, "/v1/users/followees", "get all followees of current user"
+      param_group :authorization
+      def followees; end
+
+      api :POST, "/v1/users/:id/follow", "follow user"
+      param_group :authorization
+      param :id, String, require: true, desc: "user id need to follow"
+      def follow; end
+
+      api :POST, "/v1/users/:id/unfollow", "unfollow user"
+      param_group :authorization
+      param :id, String, require: true, desc: "user id need to unfollow"
+      def unfollow; end
     end
   end
 end

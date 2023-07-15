@@ -10,22 +10,22 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "edna.tremblay@franecki.example",
-          "password": "uaN1IUrj7q"
+          "email": "leland.rodriguez@ondricka.test",
+          "password": "vUmIfo96TA3R47m"
         }
       },
       "response_data": {
         "data": {
-          "id": "266",
+          "id": "293",
           "type": "user_token",
           "attributes": {
-            "id": 266,
-            "token": "mqrwso65nq"
+            "id": 293,
+            "token": "EsnVIDZKwx"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "345",
+                "id": "384",
                 "type": "user"
               }
             }
@@ -48,8 +48,8 @@
       ],
       "query": null,
       "request_data": {
-        "email": "alica@conroy.test",
-        "password": "Gju5Ku9Twz4LkCTAP"
+        "email": "kathey_hilpert@pollich-farrell.example",
+        "password": "6hDXY577oeKg9j"
       },
       "response_data": {
         "success": false,
@@ -75,7 +75,7 @@
       "request_data": {
         "user": {
           "email": "invalid@invalid.com",
-          "password": "RxBICSY1NCHqKj12"
+          "password": "HBpBklh6D2p"
         }
       },
       "response_data": {
@@ -101,7 +101,7 @@
       "query": null,
       "request_data": {
         "user": {
-          "email": "johnie.cummings@dooley.example",
+          "email": "keshia_gibson@reynolds-gulgowski.test",
           "password": "INVALID_PASSWORD"
         }
       },
@@ -130,23 +130,23 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-13T14:43:16Z",
-          "wake_up_time": "2023-07-13T16:43:16Z"
+          "sleep_time": "2023-07-15T02:59:36Z",
+          "wake_up_time": "2023-07-15T04:59:36Z"
         }
       },
       "response_data": {
         "data": {
-          "id": "96",
+          "id": "60",
           "type": "sleep_time",
           "attributes": {
-            "id": 96,
-            "sleep_time": "2023-07-13T14:43:16.000Z",
-            "wake_up_time": "2023-07-13T16:43:16.000Z"
+            "id": 60,
+            "sleep_time": "2023-07-15T02:59:36.000Z",
+            "wake_up_time": "2023-07-15T04:59:36.000Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "355",
+                "id": "394",
                 "type": "user"
               }
             }
@@ -169,8 +169,8 @@
       ],
       "query": null,
       "request_data": {
-        "sleep_time": "2023-07-13T14:43:16Z",
-        "wake_up_time": "2023-07-13T16:43:16Z"
+        "sleep_time": "2023-07-15T02:59:36Z",
+        "wake_up_time": "2023-07-15T04:59:36Z"
       },
       "response_data": {
         "success": false,
@@ -195,8 +195,8 @@
       "query": null,
       "request_data": {
         "sleep_record": {
-          "sleep_time": "2023-07-13T14:43:16Z",
-          "wake_up_time": "2023-07-13T12:43:16Z"
+          "sleep_time": "2023-07-15T02:59:36Z",
+          "wake_up_time": "2023-07-15T00:59:36Z"
         }
       },
       "response_data": {
@@ -285,22 +285,22 @@
       "versions": [
         "1.0"
       ],
-      "query": "user_id=351",
+      "query": "user_id=390",
       "request_data": null,
       "response_data": {
         "data": [
           {
-            "id": "94",
+            "id": "58",
             "type": "sleep_time",
             "attributes": {
-              "id": 94,
-              "sleep_time": "2023-07-13T14:43:16.455Z",
-              "wake_up_time": "2023-07-13T16:43:16.455Z"
+              "id": 58,
+              "sleep_time": "2023-07-15T02:59:36.564Z",
+              "wake_up_time": "2023-07-15T04:59:36.564Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "351",
+                  "id": "390",
                   "type": "user"
                 }
               }
@@ -327,17 +327,17 @@
       "response_data": {
         "data": [
           {
-            "id": "95",
+            "id": "59",
             "type": "sleep_time",
             "attributes": {
-              "id": 95,
-              "sleep_time": "2023-07-13T14:43:16.476Z",
-              "wake_up_time": "2023-07-13T16:43:16.476Z"
+              "id": 59,
+              "sleep_time": "2023-07-15T02:59:36.585Z",
+              "wake_up_time": "2023-07-15T04:59:36.585Z"
             },
             "relationships": {
               "user": {
                 "data": {
-                  "id": "352",
+                  "id": "391",
                   "type": "user"
                 }
               }
@@ -423,7 +423,7 @@
     {
       "title": "return sleep time data",
       "verb": "GET",
-      "path": "/api/v1/sleep_times/98",
+      "path": "/api/v1/sleep_times/62",
       "versions": [
         "1.0"
       ],
@@ -431,17 +431,17 @@
       "request_data": null,
       "response_data": {
         "data": {
-          "id": "98",
+          "id": "62",
           "type": "sleep_time",
           "attributes": {
-            "id": 98,
-            "sleep_time": "2023-07-13T14:43:16.599Z",
-            "wake_up_time": "2023-07-13T16:43:16.599Z"
+            "id": 62,
+            "sleep_time": "2023-07-15T02:59:36.716Z",
+            "wake_up_time": "2023-07-15T04:59:36.716Z"
           },
           "relationships": {
             "user": {
               "data": {
-                "id": "361",
+                "id": "400",
                 "type": "user"
               }
             }
@@ -500,6 +500,273 @@
       "recorded": true
     }
   ],
+  "users#follow": [
+    {
+      "title": "cannot follow themself",
+      "verb": "POST",
+      "path": "/api/v1/users/414/follow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Follow",
+            "message": "Cannot follow your self."
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "follow other user",
+      "verb": "POST",
+      "path": "/api/v1/users/416/follow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "415",
+          "type": "user",
+          "attributes": {
+            "id": 415,
+            "name": "Christa Durgan",
+            "email": "vernon.schmidt@connelly.test"
+          }
+        },
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "cannot follow user 2 times",
+      "verb": "POST",
+      "path": "/api/v1/users/418/follow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Follow",
+            "message": "You followed this user."
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "POST",
+      "path": "/api/v1/users/ID/follow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "POST",
+      "path": "/api/v1/users/ID/follow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#followees": [
+    {
+      "title": "get all followees of current user",
+      "verb": "GET",
+      "path": "/api/v1/users/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "411",
+            "type": "user",
+            "attributes": {
+              "id": 411,
+              "name": "Laverne Volkman",
+              "email": "brad_mcglynn@lowe.example"
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "GET",
+      "path": "/api/v1/users/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "GET",
+      "path": "/api/v1/users/followees",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#followers": [
+    {
+      "title": "get all followers of current user",
+      "verb": "GET",
+      "path": "/api/v1/users/followers",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": [
+          {
+            "id": "407",
+            "type": "user",
+            "attributes": {
+              "id": 407,
+              "name": "Reggie Sipes",
+              "email": "harland@greenholt.example"
+            }
+          }
+        ],
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "GET",
+      "path": "/api/v1/users/followers",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "GET",
+      "path": "/api/v1/users/followers",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "users#index": [
     {
       "title": "get all users data",
@@ -513,12 +780,12 @@
       "response_data": {
         "data": [
           {
-            "id": "364",
+            "id": "403",
             "type": "user",
             "attributes": {
-              "id": 364,
-              "name": "Laura Hegmann",
-              "email": "ardis_rolfson@fadel.test"
+              "id": 403,
+              "name": "Vivienne Terry",
+              "email": "catarina_weissnat@corkery.example"
             }
           }
         ],
@@ -556,6 +823,101 @@
       "title": "Unauthorized request",
       "verb": "GET",
       "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#unfollow": [
+    {
+      "title": "unfollow other user",
+      "verb": "POST",
+      "path": "/api/v1/users/422/unfollow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "data": {
+          "id": "421",
+          "type": "user",
+          "attributes": {
+            "id": 421,
+            "name": "Dallas Keebler DVM",
+            "email": "michaele_corkery@torphy.example"
+          }
+        },
+        "meta": {
+        },
+        "success": true
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "annot unfollow user if not followed",
+      "verb": "POST",
+      "path": "/api/v1/users/424/unfollow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Unfollow",
+            "message": "You do not follow this user."
+          }
+        ]
+      },
+      "code": 400,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Missing AUTH_TOKEN request",
+      "verb": "POST",
+      "path": "/api/v1/users/ID/unfollow",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "success": false,
+        "errors": [
+          {
+            "id": "Authentication Token",
+            "message": "Authentication token is missing or invalid"
+          }
+        ]
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "title": "Unauthorized request",
+      "verb": "POST",
+      "path": "/api/v1/users/ID/unfollow",
       "versions": [
         "1.0"
       ],

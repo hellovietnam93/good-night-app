@@ -32,5 +32,26 @@ module Api
         @message = I18n.t("errors.authentication.authentication_failed")
       end
     end
+
+    class SelfFollow < BaseError
+      def initialize
+        @id = SettingErrors.user.self_follow
+        @message = I18n.t("errors.user.self_follow")
+      end
+    end
+
+    class Followed < BaseError
+      def initialize
+        @id = SettingErrors.user.followed
+        @message = I18n.t("errors.user.followed")
+      end
+    end
+
+    class NotFollowed < BaseError
+      def initialize
+        @id = SettingErrors.user.not_followed
+        @message = I18n.t("errors.user.not_followed")
+      end
+    end
   end
 end

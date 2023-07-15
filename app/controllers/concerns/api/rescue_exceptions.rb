@@ -14,6 +14,9 @@ module Api
 
       rescue_from Api::Error::MissingToken, with: :missing_token_render_options
       rescue_from Api::Error::AuthenticationFailed, with: :authentication_failed_render_options
+      rescue_from Api::Error::SelfFollow, with: :self_follow_render_options
+      rescue_from Api::Error::Followed, with: :followed_render_options
+      rescue_from Api::Error::NotFollowed, with: :not_followed_render_options
 
       ###############################
       ########## protected ##########
@@ -42,6 +45,18 @@ module Api
 
       def authentication_failed_render_options exception
         render json: exception.to_hash, status: :unauthorized
+      end
+
+      def self_follow_render_options exception
+        render json: exception.to_hash, status: :bad_request
+      end
+
+      def followed_render_options exception
+        render json: exception.to_hash, status: :bad_request
+      end
+
+      def not_followed_render_options exception
+        render json: exception.to_hash, status: :bad_request
       end
     end
   end

@@ -1,3 +1,7 @@
 authentication:
   missing_token: Authentication Token
   authentication_failed: Authentication
+user:
+  self_follow: Follow
+  followed: Follow
+  not_followed: Unfollow

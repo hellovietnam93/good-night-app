@@ -14,6 +14,7 @@ gem 'puma', '~> 5.0'
 gem 'rack-cors'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 gem "settingslogic", "~> 2.0", ">= 2.0.9"
+gem 'socialization', '~> 2.0', '>= 2.0.1'
 gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 
 group :development, :test do
